@@ -350,3 +350,35 @@ body.home .bar .bar-in{width:auto;max-width:none;margin:0;padding-inline:clamp(2
 .h-spec-row>div{border-top:1px solid var(--hair);padding-top:18px}
 .h-spec-row h3{font:500 .9rem var(--f-c);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .h-spec-row p{color:var(--mute);line-height:1.6;font-size:1rem}
+
+/* ===== phones ===== */
+.burger{display:none;background:none;border:1px solid var(--hair);width:46px;height:42px;padding:0;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px;margin-left:12px}
+.burger span{display:block;width:22px;height:2px;background:var(--gold-l);transition:transform .3s var(--ease),opacity .2s}
+body.menu-open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media (max-width:860px){
+  .burger{display:flex;margin-left:auto}
+  .bar-in{gap:0}
+  body.home .bar{background:linear-gradient(#000e,#0000)}
+  .menu{position:fixed;left:0;right:0;top:0;bottom:0;margin:0;padding:96px 28px 40px;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:6px;background:#050406f6;backdrop-filter:blur(8px);opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .35s ease,transform .35s var(--ease),visibility 0s .35s;z-index:-1;overflow-y:auto}
+  body.menu-open .menu{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s var(--ease)}
+  .menu a:not(.btn-top){display:block!important;font-size:1rem!important;letter-spacing:.24em!important;padding:18px 4px!important;border-bottom:1px solid var(--hair)!important}
+  .menu .btn-top{display:block;text-align:center;margin-top:18px;padding:18px 20px!important}
+  .menu .lang{margin-top:14px;align-self:flex-start;padding:12px 18px}
+  body.menu-open{overflow:hidden}
+  .brand{font-size:.92rem;letter-spacing:.16em}
+}
+@media (max-width:560px){
+  .bar-in{padding-inline:0}
+  .btn-dl{letter-spacing:.06em!important;font-size:.8rem!important;padding:18px 12px!important;gap:10px;justify-content:center;flex-direction:row;text-align:center}
+  .btn-dl svg{flex:none;width:20px;height:20px}
+  .h-hero-in{padding-inline:20px}
+  .h-hero h1{font-size:clamp(3rem,17vw,4.4rem)}
+  .h-hero .lead,.h-hero .h-lead{font-size:1.35rem}
+  .h-hero h1 em{letter-spacing:.45em}
+  .h-spec-row{grid-template-columns:1fr;text-align:left}
+  .h-end{padding-inline:20px}
+  .h-end h2{font-size:clamp(2.4rem,13vw,3.6rem)}
+  .wrap{width:calc(100% - 40px)}
+}

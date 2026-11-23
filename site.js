@@ -26,3 +26,14 @@
     if (j.downloadUrl) document.querySelectorAll("a.dl").forEach(function (a) { a.href = j.downloadUrl; });
   }).catch(function () {});
 })();
+
+/* mobile menu */
+(function () {
+  var b = document.getElementById("burger"), m = document.getElementById("mainMenu");
+  if (!b || !m) return;
+  function set(o) { document.body.classList.toggle("menu-open", o); b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function () { set(!document.body.classList.contains("menu-open")); });
+  m.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+  window.addEventListener("resize", function () { if (window.innerWidth > 860) set(false); });
+})();

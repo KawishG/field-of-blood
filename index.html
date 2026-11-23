@@ -16,12 +16,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mukta:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=76d20387">
+<link rel="stylesheet" href="style.css?v=ea287db9">
 </head>
 <body class="home">
 <header class="bar"><div class="wrap bar-in">
   <a class="brand" href="index.html">Field of <b>Blood</b></a>
-  <nav class="menu" aria-label="Hoofdmenu"><a href="index.html" aria-current="page" data-en="Home">Home</a><a href="campagne.html" data-en="Campaign">Campagne</a><a href="goden.html" data-en="Gods">Goden</a><a href="credits.html" data-en="Sources and credits">Bronnen en credits</a><a class="btn-top" href="download.html" data-en="Download">Download</a><button class="lang" id="langBtn" aria-label="Switch language">English</button></nav>
+  <nav class="menu" id="mainMenu" aria-label="Hoofdmenu"><a href="index.html" aria-current="page" data-en="Home">Home</a><a href="campagne.html" data-en="Campaign">Campagne</a><a href="goden.html" data-en="Gods">Goden</a><a href="credits.html" data-en="Sources and credits">Bronnen en credits</a><a class="btn-top" href="download.html" data-en="Download">Download</a><button class="lang" id="langBtn" aria-label="Switch language">English</button></nav>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainMenu"><span></span><span></span><span></span></button>
 </div></header>
 
 <header class="h-hero js-seq">
@@ -35,7 +36,7 @@
   <p class="dl-meta"><span data-en="Free · Windows 10 and 11 · installer of about 1.6 GB">Gratis · Windows 10 en 11 · installatieprogramma van ongeveer 1,6 GB</span> <span class="ver">v0.1.0</span></p>
   <p class="h-links"><span data-en="&lt;a href=&quot;campagne.html&quot;&gt;Read the story&lt;/a&gt; · &lt;a href=&quot;download.html&quot;&gt;How do I install it?&lt;/a&gt;"><a href="campagne.html">Lees het verhaal</a> · <a href="download.html">Hoe installeer ik het?</a></span></p>
  </div>
- <script>(function(){document.body.classList.add("js-seq");var h=document.querySelector(".h-hero"),v=h.querySelector("video"),d=false;function go(){if(d)return;d=true;h.classList.add("on");document.body.classList.add("hero-on")}if(!v||matchMedia("(prefers-reduced-motion:reduce)").matches){go();if(v){v.removeAttribute("autoplay");v.pause()}}else{v.addEventListener("ended",go);v.addEventListener("error",go);setTimeout(go,9000);var pr=v.play();if(pr&&pr.catch)pr.catch(go)}})();</script>
+ <script>(function(){document.body.classList.add("js-seq");var h=document.querySelector(".h-hero"),v=h.querySelector("video"),d=false;function go(){if(d)return;d=true;h.classList.add("on");document.body.classList.add("hero-on")}if(!v||/[?&]nointro/.test(location.search)||matchMedia("(prefers-reduced-motion:reduce)").matches){go();if(v){v.removeAttribute("autoplay");v.pause()}}else{v.addEventListener("ended",go);v.addEventListener("error",go);setTimeout(go,9000);var pr=v.play();if(pr&&pr.catch)pr.catch(go)}})();</script>
  <noscript><style>.h-hero.js-seq .h-hero-in>*{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
 </header>
 
@@ -82,6 +83,6 @@
   <p data-en="An independent fan game about the Mahabharat. Free. Story after Ganguli&#x27;s translation.">Een onafhankelijke fan-game over de Mahabharat. Gratis. Verhaal naar de vertaling van Ganguli.</p></div>
   <nav aria-label="Voettekst"><a href="index.html" data-en="Home">Home</a><a href="campagne.html" data-en="Campaign">Campagne</a><a href="goden.html" data-en="Gods">Goden</a><a href="credits.html" data-en="Sources and credits">Bronnen en credits</a><a href="download.html">Download</a></nav>
 </div></footer>
-<script src="site.js?v=c7a823a7"></script>
+<script src="site.js?v=0d0b0768"></script>
 </body>
 </html>
