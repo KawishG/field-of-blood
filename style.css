@@ -2,7 +2,7 @@
 :root{
   --red:#6e1a14; --red-d:#3b0d0b; --lapis:#0e0b10; --lapis-d:#08060a; --gold:#c9a24a; --gold-l:#e6c97e;
   --chalk:#efe6d2; --ink:#050406; --blue:#4d7fc4; --mute:#b4a98f; --hair:rgba(201,162,74,.38);
-  --f-d:"Cormorant Garamond","Noto Serif Devanagari",Georgia,serif; --f-c:"Cinzel","Cormorant Garamond",serif; --f-b:"Mukta","Segoe UI",system-ui,sans-serif;
+  --f-d:"Cormorant Garamond","Noto Serif Devanagari",Georgia,serif; --f-c:"Cinzel","Cormorant Garamond",serif; --f-b:"Jost","Segoe UI",system-ui,sans-serif;
   --gut:clamp(20px,4.5vw,64px); --ease:cubic-bezier(.16,1,.3,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -382,3 +382,17 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45de
   .h-end h2{font-size:clamp(2.4rem,13vw,3.6rem)}
   .wrap{width:calc(100% - 40px)}
 }
+
+/* body type: Jost (lighter, more refined) */
+body{font-weight:400;letter-spacing:.012em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+p,li,td,th{line-height:1.7}
+.h-credits{padding:clamp(60px,9vw,120px) clamp(20px,6vw,96px);text-align:center;border-top:1px solid var(--hair);background:#060409}
+.h-credits h2{font:500 clamp(2rem,4.6vw,3.4rem)/1.05 var(--f-d);margin:14px 0 0}
+.h-cred-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(20px,3vw,48px);margin:40px auto 0;max-width:1200px;text-align:left}
+.h-cred-row>div{border-top:1px solid var(--hair);padding-top:18px}
+.h-cred-row h3{font:500 .9rem var(--f-c);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.h-cred-row p{color:var(--mute);line-height:1.65;font-size:1rem}
+/* blood glow at the end: a full-width horizon of blood instead of a single blob */
+.h-end{background:linear-gradient(0deg,#5a1510d0 0,#3a0e0c90 14%,#1b0708 34%,transparent 62%),radial-gradient(1400px 260px at 50% 100%,#7a1c14a0,transparent 72%)}
+.h-end::after{content:"";display:block;height:3px;margin:clamp(70px,10vw,140px) auto 0;width:min(560px,70%);background:linear-gradient(90deg,transparent,#a8281c,transparent);opacity:.9;margin-bottom:calc(-1 * clamp(90px,14vw,200px) + 0px)}
+.h-credits .h-links,.h-specs .h-links{display:block;text-align:center;max-width:none;margin-inline:auto}
